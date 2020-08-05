@@ -6,7 +6,7 @@
 
 variable "associate_public_ip_address" {
   description = "Associate public IP address to instances created."
-  default     = true
+  default     = false
   type        = "string"
 }
 
@@ -23,7 +23,7 @@ variable "custom_security_group_id" {
 
 variable "instance_type" {
   description = "The type of instances to create."
-  default     = "c4.xlarge"
+  default     = "t3.medium"
   type        = "string"
 }
 
@@ -81,6 +81,7 @@ variable "ssh_user" {
 
 variable "region_name" {
   description = "Region name for AWS. Example: 'us-west-2'"
+  default     = "us-east-2"
   type        = "string"
 }
 
@@ -96,7 +97,7 @@ variable "subnet_ids" {
 
 variable "use_public_ip_for_ssh" {
   description = "Flag to control use of public or private ips for ssh."
-  default     = "true"
+  default     = "false"
   type        = "string"
 }
 
